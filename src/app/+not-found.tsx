@@ -1,12 +1,15 @@
 import { Text, View, StyleSheet } from "react-native";
-import {Link} from "expo-router";
+import {Link, Stack} from "expo-router";
 
-export default function Home() {
+export default function NotFound() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!!</Text>
-      <Link href="sobre" style={styles.button}>clique aqui</Link>
-    </View>
+    <>
+    <Stack.Screen options={{ title: "Página não encontrada" }} />
+      <View style={styles.container}>
+        <Text>Você está perdido?</Text>
+        <Link href="/" style={styles.button}>clique aqui</Link>
+      </View>
+    </>
   );
 }
 
