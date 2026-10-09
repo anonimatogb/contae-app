@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text>Hello World!!</Text>
-      <Link href="sobre" style={styles.button}>clique aqui</Link>
+      <Link href="sobre" style={styles.button}>Sobre</Link>
+      <Link href="dashboard" style={styles.button}>Dashboard</Link>
     </View>
   );
 }

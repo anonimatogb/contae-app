@@ -7,6 +7,7 @@ import {
   View,
   FlatList,
 } from "react-native";
+import { Link } from "expo-router";
 
 interface Transacao {
   id: number;
@@ -79,7 +80,7 @@ export default function App() {
       </View>
       <Text style={styles.tituloExtrato}>Extrato Financeiro</Text>
       {carregando ? (
-        <ActivityIndicator size="large" color="#f3f716" />
+        <ActivityIndicator size="large" color="#b016f7" />
       ) : (
         <FlatList
           data={transacoes}
@@ -108,6 +109,7 @@ export default function App() {
           )}
         />
       )}
+      <Link href="/" style={styles.button}>Voltar</Link>
     </View>
   );
 }
@@ -209,5 +211,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: "#94A3B8",
     marginTop: 2,
+  },
+   button: {
+    backgroundColor: "#fff",
+    padding: 8,
+    borderRadius: 5,
+    marginTop: 10,
   },
 });
