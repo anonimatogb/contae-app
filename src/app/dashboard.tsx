@@ -25,7 +25,7 @@ export default function App() {
   const [receitas, setReceitas] = useState<number>(0);
   const [despesas, setDespesas] = useState<number>(0);
 
-  const API_URL = "http://10.141.249.81:8000/api/transacoes";
+  const API_URL = "http://10.141.249.21:8000/api/transacao";
 
   function calcularTotais(dados: Transacao[]): void {
     let totalReceitas = 0;
