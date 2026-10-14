@@ -53,7 +53,9 @@ export default function App() {
       calcularTotais(dados);
     } catch (error) {
       console.log("Erro ao carregar lançamentos:", error);
-    }
+    }finally {
+  setCarregando(false);
+}
   }
   useEffect(() => {
     carregarTransacoes();
